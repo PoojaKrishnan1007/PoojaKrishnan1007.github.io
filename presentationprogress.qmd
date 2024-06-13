@@ -1,0 +1,29 @@
+---
+
+---
+
+##  Danish Flexicurity: Rights and Duties
+
+Email: [ravanasamuthram_krishnan.pooja\@stud.hs-fresenius.de](mailto:ravanasamuthram_krishnan.pooja@stud.hs-fresenius.de)
+
+Name: Pooja Ravanasamuthram Krishnan
+
+ID: 400376705
+
+Last compiled on 05 February, 2024
+
+Abstract:
+
+R language is a popular tool mainly used for analyzing, interpreting, and visualizing data, as well as for statistical computing purposes. It is an interpreted language that provides high-quality graphics. In this study, I have replicated the journal article “Danish Flexicurity: Rights and Duties” to the best of my ability and with the knowledge I have gained in one semester. The journal contains tables with data and different types of graphs. This paper demonstrates how much I have understood R language and how I have tried to reproduce the tips and tricks I have learned from my professor, Mr. Huber. The journal article, “Danish Flexicurity: Rights and Duties,” describes the Danish labor market and the benefits provided even to the unemployed individuals.
+
+Project Overview:
+
+This study particularly focuses on Denmark and the policy it has adopted for unemployed people. The Danish labor market has implemented a strategy called flexicurity, which addresses people's rights and duties. This policy outlines the rights of unemployed individuals to receive a basic income and their duty to search for jobs and participate in labor market programs. The paper presents the performance and policy rankings on a scale of 1 to 10 for Denmark and the United States, displayed in a tabular format. Denmark ranks first with a high percentage of happy people, a strong economic background, and excellent insurance benefits. The study shows the history and development of the flexicurity policy and if it is possible for the United States to adopt it (Claus Thustrup Kreiner and Michael Svarer, 2022).
+
+The Danish labor market has a tradition of negotiations between worker class people and employers, primarily concerning wages and the number of working hours of the employees. The government intervenes only when necessary, such as when the parties fail to reach an agreement. In Denmark, unions play a major role, not only participating in bargaining but also engaging in the political processes of the labor market system. In Denmark, there is a policy of flexible hiring and firing combined with high income security, which boosts the overall economic level of the country. Compared to the United States, Denmark provides higher income security and better benefits for unemployed people. The funding for these benefits comes from government subsidies and employer contributions. Even if the initial support is exhausted, Denmark has a backup system to provide additional compensation for unemployed individuals, unlike the United States. And still, the Danish employment rate is higher than the United States. Denmark also provides training and job search assistance for unemployed people in addition to unemployment benefits. Through the Active Labor Market Programs, each individual is matched with a caseworker who works to improve their job prospects and chances of finding employment. The intensity and duration of the program increase with the duration of unemployment. The purpose of this program is to prevent employees from falling below the productivity threshold (Claus Thustrup Kreiner and Michael Svarer, 2022).
+
+The older flexicurity model failed to maintain low unemployment rates despite high income security and longer insurance benefits. The jobs and training provided to unemployed people are not very effective, as they are of low intensity and only offered to those who voluntarily participate. The impact of the collective bargaining system is that firms do not retain people whose productivity is lower than their wages. When young people turn 18, their wages increase by 40%. However, records show that the employment rate of young people decreases, indicating that some young workers lose their jobs when they turn 18. This implies that firms in Denmark do not keep overpaid employees. The positive aspect is that people with low productivity are not exploited and still receive decent wages. Investing more funds in active labor market programs is important to improve people's skill sets and therefore increasing the employment rate (Claus Thustrup Kreiner and Michael Svarer, 2022).
+
+Replication of the graphs:
+
+3.1 Unemployment Rate in Denmark
