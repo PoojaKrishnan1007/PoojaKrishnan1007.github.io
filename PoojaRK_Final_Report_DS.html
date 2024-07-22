@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Email: ravanasamuthram_krishnan.pooja@stud.hs-fresenius.de">
+<meta name="author" content="Name: Pooja Ravanasamuthram Krishnan">
+<meta name="author" content="ID: 400376705">
+<meta name="dcterms.date" content="2024-07-22">
+
+<title>Recreating the Visuals: Graphical Replication of Danish Flexicurity</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="PoojaRK_Final_Report_DS_files/libs/clipboard/clipboard.min.js"></script>
+<script src="PoojaRK_Final_Report_DS_files/libs/quarto-html/quarto.js"></script>
+<script src="PoojaRK_Final_Report_DS_files/libs/quarto-html/popper.min.js"></script>
+<script src="PoojaRK_Final_Report_DS_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="PoojaRK_Final_Report_DS_files/libs/quarto-html/anchor.min.js"></script>
+<link href="PoojaRK_Final_Report_DS_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="PoojaRK_Final_Report_DS_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="PoojaRK_Final_Report_DS_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="PoojaRK_Final_Report_DS_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="PoojaRK_Final_Report_DS_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+</head><body class="fullcontent">\usepackage{setspace}\doublespacing
+
+
+
+
+
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Recreating the Visuals: Graphical Replication of Danish Flexicurity</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Email: ravanasamuthram_krishnan.pooja@stud.hs-fresenius.de </p>
+             <p>Name: Pooja Ravanasamuthram Krishnan </p>
+             <p>ID: 400376705 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 22, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="abstract" class="level1">
+<h1><strong>Abstract</strong></h1>
+<p>R language is a popular tool mainly used for analyzing, interpreting, and visualizing data, as well as for statistical computing purposes. It is an interpreted language, very similar to the S language, and can be considered a dialect and implementation of the S language.Among the thousands of packages available in R, there is a package named shiny that stands out as particularly innovative and well-suited for today’s dynamic digital environment. Shiny allows users to build interactive web applications directly from R, offering a highly responsive and user-friendly interface. This package enables the creation of complex dashboards that can be easily shared with users online. The flexibility and innovativeness of this package help data analysts and data scientists work with their findings in an interactive manner. Addidtionaly it contains myriad library files which is aids in processing of data, performing advanced AI tasks and creating complex networks. In this study, I have replicated the journal article “Danish Flexicurity: Rights and Duties” to the best of my ability and with the knowledge I have gained in one semester. The journal contains tables with data and different types of graphs. This paper demonstrates how much I have understood R language and how I have tried to reproduce the tips and tricks I have learned from my professor, Mr.&nbsp;Huber. The journal article, “Danish Flexicurity: Rights and Duties,” describes the Danish labor market and the benefits provided even to the unemployed individuals.</p>
+</section>
+<section id="project-overview" class="level1">
+<h1><strong>Project Overview</strong></h1>
+<p>This study particularly focuses on Denmark and the policy it has adopted for unemployed people. The Danish labor market has implemented a strategy called flexicurity, which addresses people’s rights and duties. This policy outlines the rights of unemployed individuals to receive a basic income and their duty to search for jobs and participate in labor market programs. The paper presents the performance and policy rankings on a scale of 1 to 10 for Denmark and the United States, displayed in a tabular format. Denmark ranks first with a high percentage of happy people, a strong economic background, and excellent insurance benefits. The study shows the history and development of the flexicurity policy and if it is possible for the United States to adopt it (Claus Thustrup Kreiner and Michael Svarer, 2022).</p>
+<p>The Danish labor market has a tradition of negotiations between worker class people and employers, primarily concerning wages and the number of working hours of the employees. The government intervenes only when necessary, such as when the parties fail to reach an agreement. In Denmark, unions play a major role, not only participating in bargaining but also engaging in the political processes of the labor market system. In Denmark, there is a policy of flexible hiring and firing combined with high income security, which boosts the overall economic level of the country. Compared to the United States, Denmark provides higher income security and better benefits for unemployed people. The funding for these benefits comes from government subsidies and employer contributions. Even if the initial support is exhausted, Denmark has a backup system to provide additional compensation for unemployed individuals, unlike the United States. And still, the Danish employment rate is higher than the United States. Denmark also provides training and job search assistance for unemployed people in addition to unemployment benefits. Through the Active Labor Market Programs, each individual is matched with a caseworker who works to improve their job prospects and chances of finding employment. The intensity and duration of the program increase with the duration of unemployment. The purpose of this program is to prevent employees from falling below the productivity threshold. In Denmark, the Danish population are almsot same in terms of their educational background, homogenity and more discplined and does work in a uniform way. These workers have high job security and have proper income . Even if they are fired, they have some amount of money provided to them for basic needs and facilities and that is taken from their income when they were earning. The system is very perfect in their own country but will suffer in other foriegn countries. In Countries like the United States, it will be a bigger challenge to follow this flexicurity method because the country has diverse people following different culture, from different background with different skillset and trying to integrate everything into the job market will be complex. The money spent on finding a job for unemployed people in Denamark is way more than the money spent by the U.S. although the United States is much more bigger country and the economy is way high than Denmark. The percentage of money that the United States spent on job benefits for unemployed is 2% which is same as Denmark but the economy varies a lot. (Claus Thustrup Kreiner and Michael Svarer,2022).</p>
+<p>The older flexicurity model failed to maintain low unemployment rates despite high income security and longer insurance benefits. The jobs and training provided to unemployed people are not very effective, as they are of low intensity and only offered to those who voluntarily participate. The impact of the collective bargaining system is that firms do not retain people whose productivity is lower than their wages. When young people turn 18, their wages increase by 40%. However, records show that the employment rate of young people decreases, indicating that some young workers lose their jobs when they turn 18. This implies that firms in Denmark do not keep overpaid employees. The positive aspect is that people with low productivity are not exploited and still receive decent wages. Investing more funds in active labor market programs is important to improve people’s skill sets and therefore increasing the employment rate (Claus Thustrup Kreiner and Michael Svarer, 2022).The Danish policy integrates two fundamental concepts: the first involves the flexibility of recruiting and firing employees according to the evolving needs of the organization, while the second focuses on offering substantial benefits to employees who are terminated. Specifically, it ensures that those who lose their jobs receive a portion of their previous income, which helps to provide financial support and stability during their period of unemployment.</p>
+</section>
+<section id="significance-of-using-r" class="level1">
+<h1><strong>Significance of using R</strong></h1>
+<p>R is widely used in the data science job market and can be run on any operating system such as windows, macOS, linux and many more environments. It can be integrated with various programming languages such as C, C#, and Python. The number of R language users and those interested in learning it is significantly increasing, largely because it is free to use, eliminating the need for financial investment and licensing. As an open-source programming language, R is accessible to anyone. With the growing number of users, many skilled professionals use R as part of their profession, while others learn it out of personal interest. The capabilities of this language are extended by the Comprehensive R Archive Network (CRAN), which contains numerous libraries and packages, such as ggplot2 and dplyr. These resources can be applied in various areas, including machine learning and bioinformatics, further enhancing the versatility and utility of R.</p>
+</section>
+<section id="replication-of-the-graphs" class="level1">
+<h1><strong>Replication of the graphs</strong></h1>
+<p>Stata is an important data analysis tool, and key, for the data and the associated supportive material to be manipulated with the help of the Stata file.The required library files and datasets for the graph generation are already set up. The Libraries like dplyr, ggplot2, reshape2, and haven have been already added. In this way the empirical dataset can be fully utilized to be<br>
+published on a secondary basis. In order to recreate the graphs as accurately as possible, it is essential to first gather data in a proper way, truly see the data and understand them. Graphs and tables that are yet to be included in the replication file provided in the stata format. For some of the visuals, the coordinates are given.In this paper, the author has made his best to finish every step within the limited time frame. I displayed the clear diagrams of the devices by export mode in the software.Correlation analysis of data gave me an idea of certain patterns and relations.Also, we need some way to correct for multiple tests if we want our results to be reliable; Bonferroni’s or other methods are in that case feasible. And along with the mathematics part continue the drone coding exercises</p>
+<p>The CRAN has multiple packages and library from which R can download set of tools in a faster way compared to installing it from the browser. The dplyr package contains tools for data manipulation and management which is a part of another package called ‘tidyverse’. This package is used for filtering purpose. If a data has to be filtered from a bunch of other data that are entered in a column or a row. The haven package is mainly used if we have data in other programming language or in other software like STATA. It helps in transporting data from R and other statistical softwares. The ggplot2 package is widely used in many areas as it contains variety of graphs and can be customized accordingly. This package is mainly used for line graphs, bar graphs and scatter plots.The reshape package is used in transformation of data into different formats for different purposes.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN =</span> <span class="st">"https://cran.rstudio.com/"</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"dplyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installing package into 'C:/Users/pooja/AppData/Local/R/win-library/4.3'
+(as 'lib' is unspecified)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>package 'dplyr' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+    C:\Users\pooja\AppData\Local\Temp\RtmpUZ6xFC\downloaded_packages</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"haven"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installing package into 'C:/Users/pooja/AppData/Local/R/win-library/4.3'
+(as 'lib' is unspecified)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>package 'haven' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+    C:\Users\pooja\AppData\Local\Temp\RtmpUZ6xFC\downloaded_packages</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installing package into 'C:/Users/pooja/AppData/Local/R/win-library/4.3'
+(as 'lib' is unspecified)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>package 'ggplot2' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+    C:\Users\pooja\AppData\Local\Temp\RtmpUZ6xFC\downloaded_packages</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"reshape2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installing package into 'C:/Users/pooja/AppData/Local/R/win-library/4.3'
+(as 'lib' is unspecified)</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>package 'reshape2' successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+    C:\Users\pooja\AppData\Local\Temp\RtmpUZ6xFC\downloaded_packages</code></pre>
+</div>
+</div>
+<section id="unemployment-rate-in-denmark" class="level3">
+<h3 class="anchored" data-anchor-id="unemployment-rate-in-denmark">Unemployment Rate in Denmark</h3>
+<p>The percentage of the labor force that is unemployed, of which is unemployed, is pictogrammed. It used an administrative source which had a close touch to so-called the official figures of the unemployed. This would also cover the people who are registered in the employment projects. Among all, the gray dashed aligns on each side mark the average values for two periods- 1980–1994 and 2006–2020. The R program code for the rectification of Figure 1 is located at the bottom. In the horizontal axis of the graph, the year is depicted, while the vertical one is the percentage of unemployed people. These are the coordinates in a replication package and the required code of the x-axis and the y-axis. In my code, I delineated the thickness and color of the line by using geom_line function as well as the function geom_hline. I used to create the type of line and the dashed intercept. In the case of the footnote, a<br>
+function annotate is employed. The x and y axis are lastly restricted. As shown in the graph, people’s employment status can be set off-kilter. It depicts some peaks, but together with this, the unemployment rate has also decreased in comparison with previous years.The last graph is a simple line graph that can be easily understood and can be compared with the gray line which gives a particular slope.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>year <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1980</span>, <span class="dv">2020</span>, <span class="at">by =</span> <span class="dv">1</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>percent <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">7.3</span>, <span class="fl">9.5</span>, <span class="fl">10.4</span>, <span class="fl">11.2</span>, <span class="fl">10.8</span>, <span class="fl">9.7</span>, <span class="fl">8.3</span>, <span class="fl">8.3</span>, <span class="fl">9.0</span>, <span class="fl">10.0</span>, <span class="fl">10.5</span>, <span class="fl">11.6</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fl">12.4</span>, <span class="fl">13.6</span>, <span class="fl">13.3</span>, <span class="fl">11.0</span>, <span class="fl">9.6</span>, <span class="fl">8.5</span>, <span class="fl">7.4</span>, <span class="fl">7.0</span>,<span class="fl">6.7</span>, <span class="fl">6.3</span>, <span class="fl">6.3</span>, <span class="fl">6.9</span>, <span class="fl">7.0</span>, <span class="fl">6.2</span>, <span class="fl">4.9</span>,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fl">3.5</span>, <span class="fl">2.5</span>, <span class="fl">4.6</span>, <span class="fl">5.7</span>, <span class="fl">5.6</span>, <span class="fl">5.7</span>, <span class="fl">5.4</span>, <span class="fl">4.7</span>, <span class="fl">4.3</span>, <span class="fl">3.9</span>, <span class="fl">4.0</span>, <span class="fl">3.6</span>, <span class="fl">3.5</span>, <span class="fl">4.4</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(year, percent)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot using ggplot2</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent)) <span class="sc">+</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span>  <span class="co"># Line plot</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">10.4</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey"</span>) <span class="sc">+</span>  </span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">4.4</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">color =</span> <span class="st">"grey"</span>) <span class="sc">+</span>   </span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">1987</span>, <span class="at">y =</span> <span class="dv">11</span>, <span class="at">label =</span> <span class="st">"10.4%"</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>,</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span><span class="st">"black"</span>) <span class="sc">+</span>  </span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">2011</span>, <span class="at">y =</span> <span class="dv">5</span>, <span class="at">label =</span> <span class="st">"4.4%"</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>, </span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>           <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span>   </span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">""</span>, <span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">"Percent"</span>) <span class="sc">+</span>  <span class="co"># Labels</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span>  <span class="co"># Theme</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">16</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">16</span>, <span class="at">by =</span> <span class="dv">2</span>)) <span class="sc">+</span> </span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1980</span>, <span class="dv">2020</span>, <span class="at">by =</span> <span class="dv">5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="PoojaRK_Final_Report_DS_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="employment-rate-around-workers-18th-birthday" class="level3">
+<h3 class="anchored" data-anchor-id="employment-rate-around-workers-18th-birthday">Employment Rate around Workers’ 18th Birthday</h3>
+<p>The above chart presents the percentage of people employed in the months before and after they become 18 years old. Mismatching the first graph was my fault as I was not familiar with the material. On the other hand, I tried new functions like adding vertical lines and the scatterplot with line plot on simultaneous plot. Furthermore, I mastered the process of putting the x-axis of labels to that slant as somewhat resembles the same in the original chart. Rotating the x-axis labels at a 45-degree angle was the key thing I learned and accomplished with the help of a tool that is not always present in all graphs. Replication of this graph is not possible as the replication package was also not found in the original package, the author showed it, and I later fetched it from another journal. In order to redo the same chart, the other way was to use the information that I learned from the tutorials on writing and coding the construction of the code. Instead of driving code from the replication data, I derived the insights from the lectures and created the graph.</p>
+<p>Namely, when you look down, you will see the x-axis, which extends from -24 to 24. The representing the employment rate. With the use of the seq() function one can make sequences of numbers which have different lengths, number, and end. The help of the min_length function, where the months and employment rates is an authoritative prerequisite. Both months and employment rates are then placed in the data frame. A scatter plot is executed with the point size set to 2 and other plots are added by defining the coordinates of the function. Of course, to put vertical lines at every 12 months from -24 I need to make use of the geom_vline function. Besides that, the x-axis and y-axis intercepts are stated.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Example data (replace with your actual data)</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>Month <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">24</span><span class="sc">:</span><span class="dv">24</span>  <span class="co"># Example months from -24 to 24</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>EmploymentRate <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">38</span>, <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">9</span>), <span class="fu">seq</span>(<span class="dv">30</span>, <span class="dv">50</span>, <span class="at">length.out =</span> <span class="dv">9</span>), <span class="fu">seq</span>(<span class="dv">50</span>, <span class="dv">40</span>, <span class="at">length.out =</span> <span class="dv">10</span>), <span class="fu">seq</span>(<span class="dv">40</span>, <span class="dv">60</span>, <span class="at">length.out =</span> <span class="dv">10</span>), <span class="fu">rep</span>(<span class="cn">NA</span>, <span class="dv">9</span>), <span class="dv">38</span>)  <span class="co"># Example rates</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create data frame</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>min_length <span class="ot">&lt;-</span> <span class="fu">min</span>(<span class="fu">length</span>(Month), <span class="fu">length</span>(EmploymentRate))</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>Month <span class="ot">&lt;-</span> Month[<span class="dv">1</span><span class="sc">:</span>min_length]</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>EmploymentRate <span class="ot">&lt;-</span> EmploymentRate[<span class="dv">1</span><span class="sc">:</span>min_length]</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Month =</span> Month, <span class="at">EmploymentRate =</span> EmploymentRate)</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove rows with missing or non-finite values</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(df)</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> Month, <span class="at">y =</span> EmploymentRate)) <span class="sc">+</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span>                               <span class="co"># Scatter plot</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span>  <span class="co"># Smooth line</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Employment Rate by Month Relative to 18th Birthday"</span>,</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Month relative to 18th birthday"</span>,</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Employment rate (percent)"</span>) <span class="sc">+</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>)) <span class="sc">+</span>  <span class="co"># Rotate x-axis labels</span></span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">24</span>, <span class="dv">24</span>, <span class="at">by =</span> <span class="dv">12</span>), <span class="at">linetype =</span> <span class="st">"solid"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span>  <span class="co"># Add vertical lines</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">60</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">20</span>, <span class="dv">60</span>, <span class="at">by =</span> <span class="dv">10</span>)) <span class="sc">+</span>  <span class="co"># Set y-axis limits and breaks</span></span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">24</span>, <span class="dv">24</span>, <span class="at">by =</span> <span class="dv">2</span>))  <span class="co"># Set x-axis breaks</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="PoojaRK_Final_Report_DS_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="employment-rate-around-workers-18th-birthday-1" class="level3">
+<h3 class="anchored" data-anchor-id="employment-rate-around-workers-18th-birthday-1">Employment Rate around Workers’ 18th Birthday</h3>
+<p>The given diagram represents the proportion of individuals who are not employed yet within two categories: Sector 1 comprises people who receive job support more often, while Category 2 comprises supporters who get standard job help. The library reshape2 is the package employed for molding the data values and transformation of them into a different format. The x-axis is the one that stands for a time interval, and for plotting the two exponential curves, the treatment and control curves, the exp function is used and is multiplied with -0.1 and -0.05 for it to represent itself, respectively. The former and latter are multiplied by negative numbers that are expressed as time goes down (decreases). The first curve drops off at a slower rate compared to the second one. The melt function gets the data from a wide form and makes it long by reducing it to Polynomials. Additionally, it is included in the reshape library. In this case, I try to think of weeks as a natural variable, and we can give a number of points for each variable name. Then, by setting it as, for example, line 1:green, 2:middle, and 3:dashed, we can be sure about the plot of the line. The lab function titles, the x and y axis, for scaling the axis, are used by it latter.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample data for the plot</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>weeks <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">50</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>treatment <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.1</span> <span class="sc">*</span> weeks) <span class="sc">*</span> <span class="dv">10</span>  <span class="co"># Example data for treatment group</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  control <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="fl">0.05</span> <span class="sc">*</span> weeks) <span class="sc">*</span> <span class="dv">10</span>  <span class="co"># Example data for control group</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a data frame</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(weeks, treatment, control)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Melt the data for ggplot2</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>data_melted <span class="ot">&lt;-</span> <span class="fu">melt</span>(data, <span class="at">id.vars =</span> <span class="st">'weeks'</span>, <span class="at">variable.name =</span> <span class="st">'Group'</span>, <span class="at">value.name =</span> <span class="st">'Percent'</span>)</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure the Group column has the correct factor levels</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>data_melted<span class="sc">$</span>Group <span class="ot">&lt;-</span> <span class="fu">factor</span>(data_melted<span class="sc">$</span>Group, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">'treatment'</span>, <span class="st">'control'</span>))</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the plot</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_melted, <span class="fu">aes</span>(<span class="at">x =</span> weeks, <span class="at">y =</span> Percent, <span class="at">color =</span> Group, <span class="at">linetype =</span> Group)) <span class="sc">+</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'treatment'</span> <span class="ot">=</span> <span class="st">'blue'</span>, <span class="st">'control'</span> <span class="ot">=</span> <span class="st">'red'</span>)) <span class="sc">+</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'treatment'</span> <span class="ot">=</span> <span class="st">'solid'</span>, <span class="st">'control'</span> <span class="ot">=</span> <span class="st">'dashed'</span>)) <span class="sc">+</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">'Treatment vs Control over Time'</span>, <span class="at">x =</span> <span class="st">'Duration in weeks'</span>, <span class="at">y =</span> <span class="st">'Percent'</span>) <span class="sc">+</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.title =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="PoojaRK_Final_Report_DS_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="creating-a-pull-request" class="level1">
+<h1><strong>Creating a pull request</strong></h1>
+<p>GitHub is a popular web-based platform that is used to share our work with others and collaborate on projects. This platform is mostly used in software development projects, allowing team members to view progress and work accordingly, to work on testing and deployment process. It lets creation of repository where multiple files can be stored and also shows the history of the details of the changes and the user who made the change. Creating branches is the special feature of github. Users usually create a branch which is actually a copy of the original code base or package where any changes or experiment can be made and tested. It is widely used for teamwork and hosting websites. I was first introduced to this platform for sharing my work with my colleagues and my professor. The procedure that was followed to host my work on GitHub is mentioned below:</p>
+<ol type="1">
+<li>A profile was created on GitHub.</li>
+<li>A repository was created.</li>
+<li>Then the repository was uploaded using git.The commands to upload the repository is git init, git add, git commit.<br>
+Git is a flexible distributive version control system used by big companies like Google, Netflix,Linkedin, Microsoft and Facebook since it can handle large projects with ease.</li>
+<li>A README file was created first.</li>
+<li>Then, the files that were ready to be uploaded were committed using the commit button.</li>
+<li>It automatically asks for commit comments. We can provide specific comments to let other viewers know about the details of our work.</li>
+<li>Finally, the changes are pushed to the repository and completed the process by creating a pull request.</li>
+</ol>
+<p>Git commands are run using a Unix-based application, which simplifies the work for developers working on their projects who use the Windows operating system. Git and GitHub are increasingly utilized for project management purposes for data manipulation. In software development projects, a pull request is created to have our work reviewed and discussed for potential changes. Once a pull request is merged into the main branch, it becomes part of the project’s history. It is always better to thoroughly check the work before creating a pull request, as once it is created and merged, reverting it requires committing new changes and creating another pull request to undo or correct the previous ones.</p>
+</section>
+<section id="limitations-of-r" class="level1">
+<h1><strong>Limitations of R</strong></h1>
+<p>R is a 50-year-old language that takes up a lot of memory on our computers. The features in R are somewhat limited, and if we want a specific feature, we have to add it manually, hire someone to do it for us, or use a feature added by someone else. People still face challenges with memory limits, even though improvements have been made and various add-on packages have been developed. Apart from this, it really lacks advanced graphic capabilities.The standard of the programming language is low, and it is very slow, much slower than Python and MATLAB. Moreover, there is no separate support system to raise queries and seek assistance for the issues faced when using R Studio. This makes it difficult to use, as users have to rely on other sources like YouTube and online platforms to troubleshoot problems.</p>
+</section>
+<section id="conclusion" class="level1">
+<h1><strong>Conclusion</strong></h1>
+<p>Drawing on the extensive knowledge I gained by attending Mr.&nbsp;Huber’s informative classes, as well as the comprehensive notes he uploaded on his GitHub platform and ILIAS, I have acquired a thorough understanding of how to utilize R Studio and GitHub effectively. This includes the processes for creating various file types such as .rmd, .html, .qmd, and .pdf, and also how to upload these files to GitHub. Leveraging this detailed information, I have meticulously written my code and developed content, striving to make the most out of every piece of information and instruction provided to me. Throughout the process of writing my paper, I learned many valuable lessons, such as discovering why the font size and formatting variations I applied in my .rmd file were not reflected in the .html file after knitting the document. I realized that the issue occurred because I had not configured it to generate a standalone HTML document. Additionally, to properly manage and cite references, I gave the citation in APA format and saved as .bib format but unfortunatly the refernces are not showing up in the .pfd file. So I have written it manually. The paper ‘Danish Flexicurity’ contained one additional graph and a table that I have not included in this paper, primarily due to the limited duration available for the replication of my assigned paper. Furthermore, the replication process for the table was particularly challenging because the dataset provided was quite extensive and complex. The replication package for this table encompassed not only large volumes of data in Excel spreadsheets but also included code written in the STATA programming language. This combination of detailed data and programming code added significant complexity to the replication effort. The findings in this paper provided me with hands-on experience in using a programming language and various platforms to create a website.</p>
+</section>
+<section id="affidavit" class="level1">
+<h1><strong>Affidavit</strong></h1>
+<p>I hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.</p>
+<p>I have read the Handbook of Academic Writing by Hildebrandt &amp; Nelke (2019) and have endeavored to comply with the guidelines and standards set forth therein.</p>
+<p>I acknowledge that the university may use plagiarism detection software to check my thesis. I agree to cooperate with any investigation of suspected plagiarism and to provide any additional information or evidence requested by the university.</p>
+<p>The report includes:</p>
+<ul class="task-list">
+<li><p><label><input type="checkbox" checked="">About 4000 words (+/- 500).</label></p></li>
+<li><p><label><input type="checkbox" checked="">A title page with personal details (name, email, matriculation number).</label></p></li>
+<li><p><label><input type="checkbox" checked="">An abstract.</label></p></li>
+<li><p><label><input type="checkbox" checked="">A bibliography, created using BibTeX with APA citation style.</label></p></li>
+<li><p><label><input type="checkbox" checked="">The complete R code required to reproduce the results.</label></p></li>
+<li><p><label><input type="checkbox" checked="">Detailed instructions on data acquisition and importation into</label></p>
+<ol start="18" type="A">
+<li></li>
+</ol></li>
+<li><p><label><input type="checkbox" checked="">An introduction to guide the reader and a conclusion summarizing the work and discussing potential future extensions.</label></p></li>
+<li><p><label><input type="checkbox" checked="">All significant resources used in the report and R code development.</label></p></li>
+<li><p><label><input type="checkbox" checked="">The filled out Affidavit.</label></p></li>
+<li><p><label><input type="checkbox" checked="">A concise description of the successful use of Git and GitHub, as detailed here: - - make_a_pull_request.</label></p></li>
+<li><p><label><input type="checkbox" checked="">A concise description of the presentation published on GitHub.</label></p></li>
+<li><p><label><input type="checkbox" checked="">The project submission includes:</label></p></li>
+<li><p><label><input type="checkbox" checked="">… The .qmd file(s) of the report.</label></p></li>
+<li><p><label><input type="checkbox" checked="">… The _quarto.yml file of the report.</label></p></li>
+<li><p><label><input type="checkbox" checked="">… The .pdf file of the report.</label></p></li>
+<li><p><label><input type="checkbox" checked="">… The standalone .html file of the report.</label></p></li>
+<li><p><label><input type="checkbox" checked="">… All necessary files (not available online) to reproduce the report and the R code.</label></p></li>
+<li><p><label><input type="checkbox" checked="">… The standalone .html file of the presentation.</label></p></li>
+</ul>
+<p>Pooja Ravanasamuthram Krishnan, 19.07.2024, Cologne, Germany</p>
+</section>
+<section id="references" class="level1">
+<h1><strong>References</strong></h1>
+<ol type="1">
+<li><p>Works Cited“Introduction to Github.” GeeksforGeeks, 17 Sept.&nbsp;2015, www.geeksforgeeks.org/introduction-to-github/.</p></li>
+<li><p>Kreiner, Claus Thustrup, and Michael Svarer. “Danish Flexicurity: Rights and Duties.” Journal of Economic Perspectives, vol.&nbsp;36, no. 4, 1 Nov.&nbsp;2022, pp.&nbsp;81–102, https://doi.org/10.1257/jep.36.4.81. Accessed 11 Dec.&nbsp;2022.</p></li>
+<li><p>“R Programming Language - Introduction.” GeeksforGeeks, 3 Apr.&nbsp;2020, www.geeksforgeeks.org/r-programming-language-introduction/.</p></li>
+</ol>
+<hr>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
